@@ -1,22 +1,22 @@
-*http status code:
+* http status code:
 200: ok
 301：moved permanently
 403：Forbidden
 404：Not found
 500：internal serber error
 
-*install Django:
+* install Django:
 pip3 install Django
 
-*start a Django subject command:
+* start a Django subject command:
 command: django-admin startproject project_name
 run this command, Django will automatically create a file to start with process of buiding a web application project for us.
 
 
-*and then, go to file is created by cd project name:
+* and then, go to file is created by cd project name:
 cd prject name (you will see file that was named manage.py)
 
-*next, run the following command for getting web site:  ##接下来的操作（包括这一步）都在Django给你创建好的文件下的terminal工作。
+* next, run the following command for getting web site:  ##接下来的操作（包括这一步）都在Django给你创建好的文件下的terminal工作。
 python manage.py runserver
 you will be feedbacked as follows: 
 Watching for file changes with StatReloader
@@ -32,7 +32,7 @@ Quit the server with CTRL-BREAK.
 [04/Jan/2022 14:06:51] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
 Not Found: /favicon.ico
 
-*as follows, you can google Starting development server at http://127.0.0.1:8000/, also have a feedback picture:
+* as follows, you can google Starting development server at http://127.0.0.1:8000/, also have a feedback picture:
 web-programming\3. Django\feedback of runserver.png
 
 * ^c is command to refresh that web, you can run in the terminal.
@@ -42,30 +42,30 @@ python manage.py startapp app_name
 
 * and then, go to settings file, line of INSTALLED_APP, add " 'hello', " in the list, cause first you create app, secondly you need link the app you created with you web project(here my project was named first_web).
 
-*so next, you can go to create your web view in the veiws.py of hello app, like I coding.
+* so next, you can go to create your web view in the veiws.py of hello app, like I coding.
 
-*now, django give you a web view, but you also can desgin you own view, so you need to create a own url, and link your url(url.py) to project(first_web), and then, the web can show your own views, like this:
+* now, django give you a web view, but you also can desgin you own view, so you need to create a own url, and link your url(url.py) to project(first_web), and then, the web can show your own views, like this:
 create a file is named urls.py in the hello file, and coding like this.
 go to urls.py of first_web, and coding like this.
 
-*now you can google web http://127.0.0.1:8000, and add "/hello/", like this http://127.0.0.1:8000/hello/.
+* now you can google web http://127.0.0.1:8000, and add "/hello/", like this http://127.0.0.1:8000/hello/.
 
 
 
 ***************************************************************************************************************************
-*what is Django:
+* what is Django:
 Django （/ˈdʒæŋɡoʊ/jang-goh） 是用 Python 写的一个自由和开放源码 web 应用程序框架。 web框架是一套组件，能帮助你更快、更容易地开发web站点。
 当你开始构建一个web站点时，你总需要一些相似的组件：处理用户认证（注册、登录、登出）的方式、一个管理站点的面板、表单、上传文件的方式，等等。
 幸运的是，其他人很早就注意到web开发人员会面临一些共同的问题。所以他们联手创建了 web 框架（Django 是其中一个）来让你使用。
 由于框架的存在，你无需重新发明轮子就能建立新的站点。
 
 
-*你为什么需要一个框架？
+* 你为什么需要一个框架？
 要理解什么是Django， 我们需要更仔细的看一下服务器。 服务器需要知道的第一件事就是你希望它为你的网页做什么。
 
 想象一个用来监控接收邮件（请求）的邮箱（端口）。 这就是网站服务器做的事情。 网站服务器读这封信，然后将响应发送给网页。 但是当你想发送一些东西的时候，你必须要有一些内容。 而Django就是可以帮助您创建内容的工具。
 
-*当有人向您的服务器请求一个网站，会发生什么呢？
+* 当有人向您的服务器请求一个网站，会发生什么呢？
 当一个请求到达网站服务器，它会被传递到Django，试图找到实际上什么是被请求的。 它首先会拿到一个网页的地址，然后试图去弄清该做什么。 这个部分是由Django的urlresolver（url解析器。注意一个网站的地址被叫做URL，统一资源定位器，所以url解析器是有意义的）。 它并不十分聪明，他接受一个模式列表，然后试图去匹配 URL。 Django从顶到底检查模式，如果有匹配上的，那么Django会将请求传递给相关的函数（这被称作视图）。).
 
 想象一个邮递员拿着一封信。 她沿着街区走下去，检查每一个房号与信件地址是否对应。 如果匹配上了，她就把信投在那里。 这也是url解析器的工作方式！
